@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>Kviz</title>
+	<link rel="stylesheet" type="text/css" href="kviz.css">
+	<script type="text/javascript" src="validacija.js"></script>
+	<script type="text/javascript" src="DinMeni.js"></script>
+</head>
+<body onload="inicijalizacija()">
+	<div class="meni">
+		<a href="index.html"><span class="menip">Početna strana</span></a> 
+		<span class="menip">Detaljnije
+			<span class="podmeni">
+				<a href="mene.html"><div class="menip">Mesečeve mene</div></a>
+				<a href="pomracenje.html"><div class="menip">Pomračenje Meseca</div></a>
+				<a href="pio.html"><div class="menip">Plima i oseka</div></a>
+			</span>
+		</span>
+		<a href="kviz.html"><span class="menip">Kviz</span></a> 
+		<a href="slikeMeseca.html"><span class="menip">Galerija</span></a> 
+		<a href="animacija.html"><span class="menip">Animacija</span></a> 
+		<a href="kalendar.html"><span class="menip">Kalendar</span></a>
+		<a href="kanvas2.html"><span class="menip">Canvas</span></a>
+	</div>
+	<br><br><br><br><br><br><br>
+	<p>Proverite koliko znate o Mesecu:</p>
+	<form name="forma" action="ispisKviz.html" onsubmit="return rezultat()">
+		<fieldset>
+			<legend>Pitanja:</legend>
+		<p>1. Koji astronom je prvi kročio na Mesec? <br><br> <input type="text" size="20" name="prvoP"></p><br>
+		<p>2. Više od 10 ljudi je posetilo Mesec?<br> <input type="checkbox"></p><br>
+		<p>
+			3. Mesec je
+			<select name="selekt">
+				<option value="-1" selected>[izaberite odgovor]</option>
+				<option value="1">satelit</option>
+				<option value="2">planeta</option>
+				<option value="3">asteriod</option>
+			</select>
+		</p><br>
+		<p>4. Mesec ima <input type="text" name="cetvrtoPitanje"> mene.</p><br>
+		<p>5. Datum prve čovekove posete Mesecu je <input type="date" ></p><br>
+		<p>6. Oko koliko sati se obično Mesec pojavljuje na nebu? <input type="time" name=""></p><br>
+		<p>7. Mesec je na prvi pogled: <input type="color" name="color" value="#FFFF00"></p><br>
+		<p>8. Po Vašem mišljenju, koliko je dana potrebno da Mesec obiđe Zemlju na skali od 0 do 30?<br><br> <input type="range" min="0" max="30"></p><br>
+		<p>9. Svaki naziv punog Meseca je<br><br> <input type="radio" name="ime" value="i" checked>isti<br><input type="radio" name="ime" value="d">drugačiji</p>
+		</fieldset>
+		<br>
+		<fieldset>
+			<legend>Molimo Vas da u tri rečenice obrazložite Vaše mišljenje o tome da li ima smeća na Mesecu.<br>(ovaj odgovor služi isključivo za potrebe ankete).</legend>
+			<textarea name="komentari" rows="10" cols="100"> Obrazloženje </textarea>
+		</fieldset>
+		<br>
+		<input type="submit" value="Pošalji odgovore">
+	</form>
+
+
+</body>
+</html>

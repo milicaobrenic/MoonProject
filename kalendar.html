@@ -1,0 +1,34 @@
+
+
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>Kalendar</title>
+	<script type="text/javascript" src="kalendar.js"></script>
+</head>
+<body style="background-color: Aqua">
+	<br><br>
+	<button type="button" onclick="document.getElementById('div').innerHTML = Date()">
+		Kliknite da vam se prikažu trenutni datum i vreme.
+	</button>
+	<p id="div"></p><br><br>
+	<p onclick="rodjendan()" style="font-size: 1.2em; color: Blue";">Kliknite na tekst da biste saznali broj godina autora.</p>
+	
+
+	<script type="text/javascript">
+		function rodjendan(){
+			var rodj = new Date("11/22/1998");  
+			var danas = new Date();  
+			var god = danas.getFullYear() - rodj.getFullYear();  
+
+			rodj.setFullYear(danas.getFullYear());  
+
+			if (danas < rodj) {  
+	   		 	god--;  
+			}  
+				confirm("Autor ima " + god + " godina.");  
+		}
+	</script>
+</body>
+</html>
